@@ -5,6 +5,10 @@ public:
 
     // Encodes a URL to a shortened URL.
     string encode(string longUrl) {
+        /*
+            Random heuristic: shorten url based on modulo of large primes
+            large since we do not want our short url to be any longer
+        */
         int len = longUrl.size();
         int idx = 0;
         string res("");
